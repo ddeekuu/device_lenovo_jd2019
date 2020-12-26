@@ -17,21 +17,19 @@
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Inherit some common corvusOS stuff.
-$(call inherit-product, vendor/corvus/config/common_full_phone.mk)
+$(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
+NAD_BUILD_TYPE := UNOFFICIAL
+USE_GAPPS ?= false
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := corvus_jd2019
+PRODUCT_NAME := nad_jd2019
 PRODUCT_BRAND := lenovo
 PRODUCT_DEVICE := jd2019
 PRODUCT_MANUFACTURER := lenovo
 PRODUCT_MODEL := Lenovo Z5s
 
 PRODUCT_GMS_CLIENTID_BASE := android-lenovo
-
-# Maintainer
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.corvus.maintainer="Victor (merser2005)"
 
 BUILD_FINGERPRINT := google/redfin/redfin:11/RQ1A.201205.010/6953398:user/release-keys
